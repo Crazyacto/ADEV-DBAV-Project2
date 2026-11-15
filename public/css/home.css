@@ -1,0 +1,120 @@
+body {
+    background-color: #FEEAC9;
+    margin: 0;
+    min-height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 1200px;
+
+    user-select: none;
+}
+
+#big_text {
+    color: black;
+    font-weight: 700;
+    font-size: 80px;
+}
+
+#small_text {
+    color: black;
+    width: 500px;
+    height: auto;
+    font-size: 32px;
+    overflow-wrap: break-word;
+}
+
+#text_container {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+}
+
+#side_by_side_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+/* hero banner */
+
+#hero_container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#hero_container img {
+    width: 100%;
+    min-height: 600px;
+    min-width: 1200px;
+    display: block;
+}
+
+
+/* about us */
+
+#about_us_section #small_text {
+    text-align: center;
+    width: 650px;
+}
+
+#about_us_section img {
+    padding-right: 100px;
+    width: 600px;
+}
+
+#about_us_section {
+    background-color: #FFCDC9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+
+/* adoption highlights */
+
+#adoption_highlights_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+#profile_container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 96px;
+}
+
+
+/* About This Website */
+
+#about_website_section #side_by_side_container {
+    margin-top: 100px;
+}
+
+#about_website_section #small_text {
+    text-align: center;
+    width: 650px;
+    margin-right: 100px;
+}
+
+#about_website_section img {
+    padding-right: 100px;
+    width: 300px;
+}
+
+#about_website_section {
+    background-color: #FFCDC9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+

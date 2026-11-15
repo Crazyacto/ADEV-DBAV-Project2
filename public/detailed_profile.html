@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/top_and_bottom_styling.css">
+    <link rel="stylesheet" href="./css/detailed_profile.css">
+    <script src="./js/detailed_profile.js"></script>
+    <script>
+        function goToContactUs() {
+            window.location = "./contact_us.html";
+        }
+    </script>
+    <title>The Animal Database</title>
+</head>
+<body onload="loadFullProfile()">
+    <main id="top_bar">
+        <div class="nav_container">
+            <img src="./images/temasek_poly_logo.png">
+            <div class="nav_links">
+                <a href="./home.html">Home</a>
+                <a href="./animal_database.html">Animal Database</a> 
+                <a href="./admin_portal.html">Admin Portal</a>
+                <a href="./contact_us.html">Contact Us</a>
+            </div>
+        </div>
+    </main>
+
+    <main id="main_content">
+
+        <img id="animalImage" src="">
+        
+        <div id="container_1">
+            <div class="big_text" id="animalName">Animal name</div>
+            <div id="container_2">
+                <div class="small_text" id="species">Species: </div>
+                <div class="small_text" id="gender">Gender: </div>
+                <div class="small_text" id="breed">Breed: </div>
+                <div class="small_text" id="age">Age: </div>
+                <div class="small_text" id="adoptionStatus">Adoption Status: </div>
+            </div>
+            <div class="small_text">Temperament/personality description: </div>
+            <div class="smaller_text" id="personalityDescription"></div>
+
+            <button id="contact_button" onclick="goToContactUs()">Contact us</button>
+        </div>
+        
+
+        
+    </main>
+
+    <main id="bottom_bar">
+        <div class="nav_container">
+            <img src="./images/Temasek_Poly_logo.png">
+            <div class="nav_links">
+                <a href="./home.html">Home</a>
+                <a href="./animal_database.html">Animal Database</a> 
+                <a href="./admin_portal.html">Admin Portal</a>
+                <a href="./contact_us.html">Contact Us</a>
+            </div>
+        </div>
+        <hr>
+        <div id="lower_section">
+            <a href="https://www.instagram.com/temasekpoly"><img src="./images/instagram_icon.png"></a>
+            <a href="https://www.youtube.com/temasekpolysg"><img src="./images/youtube_icon.png"></a>
+            <a href="https://www.linkedin.com/school/temasek-polytechnic"><img src="./images/linked_in_icon.png"></a>
+        </div>
+    </main>
+</body>
+</html>

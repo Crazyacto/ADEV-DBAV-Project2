@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/admin_animal_database.css">
+    <link rel="stylesheet" href="./css/admin_top_styling.css">
+    <link rel="stylesheet" href="./css/profile_styling.css">
+    <script src="./js/animal_database.js" defer></script>
+    <script>
+        function goToAddAnimalPage() {
+            window.location = "./admin_add_page.html";
+        }
+    </script>
+    
+    <title>The Animal Database</title>
+</head>
+<body onload="retrieveAllProfiles('admin')">
+    <main id="top_bar">
+        <div class="nav_container">
+            <img src="./images/temasek_poly_logo.png">
+            <a href="./home.html">Log Out</a>
+        </div>
+    </main>
+
+    <main id="main_content">
+        <div id="page_description">
+            <div id="big_text">The Animal Database</div>
+            <button id="add_button" onclick="goToAddAnimalPage()"><img src="./images/add_icon.png">add new animal</button>
+        </div>
+
+        <div id="filter_bar">
+            <button id="filter_menu_button" onclick="showFilterMenu()">
+                <img src="./images/arrow_down_icon.png">
+                <img src="./images/filter_icon.png">
+            </button>
+            <div id="active_filters">
+            </div>
+            <button id="filter_apply_button" onclick="applyFilters('admin')">Apply filters</button>
+
+            <div id="filter_menu">
+                <form>
+                    <div id="form_elements">
+                        <div id="form_big_text">Age</div>
+                        <div class="input_container" id="age_container">
+                            <input name="minAge" type="number" placeholder="Min age" id="min_age">
+                            <input name="maxAge" type="number" placeholder="Max age" id="max_age">
+                        </div>
+
+                        <div id="form_big_text">Adoption status</div>
+                        <div class="input_container" id="adoption_status_container">
+                            <input name="adoptionStatus" id="Adopted" class="checkbox_input" value="3" type="checkbox">
+                            <label for="Adopted">Adopted</label>
+                            <input name="adoptionStatus" id="Reserved" class="checkbox_input" value="2" type="checkbox">
+                            <label for="Reserved">Reserved</label>
+                            <input name="adoptionStatus" id="Avaliable" class="checkbox_input" value="1" type="checkbox">
+                            <label for="Avaliable">Avaliable</label>
+                        </div>
+
+                        <div id="form_big_text">Gender</div>
+                        <div class="input_container" id="gender_container">
+                            <input name="gender" id="Male" class="checkbox_input" value="1" type="checkbox">
+                            <label for="Male">Male</label>
+                            <input name="gender" id="Female" class="checkbox_input" value="2" type="checkbox">
+                            <label for="Female">Female</label>
+                        </div>
+
+                        <div id="form_big_text">Species</div>
+                        <div class="input_container" id="species_container">
+                            <input name="species" id="Dog" class="checkbox_input" value="2" type="checkbox">
+                            <label for="Dog">Dog</label>
+                            <input name="species" id="Cat" class="checkbox_input" value="1" type="checkbox">
+                            <label for="Cat">Cat</label>
+                            <input name="species" id="Rabbit" class="checkbox_input" value="3" type="checkbox">
+                            <label for="Rabbit">Rabbit</label>
+                        </div>
+
+                        <div id="form_big_text">Breed</div>
+                        <div class="input_container" id="breed_container">
+                            <input name="breed" id="American Shorthair" class="checkbox_input" value="1" type="checkbox">
+                            <label for="American Shorthair">American Shorthair</label>
+                            <input name="breed" id="Maine Coon" class="checkbox_input" value="2" type="checkbox">
+                            <label for="Maine Coon">Maine Coon</label>
+                            <input name="breed" id="Golden Retriever" class="checkbox_input" value="3" type="checkbox">
+                            <label for="Golden Retriever">Golden Retriever</label>
+                            <input name="breed" id="Japanese Spitz" class="checkbox_input" value="4" type="checkbox">
+                            <label for="Japanese Spitz">Japanese Spitz</label>
+                            <input name="breed" id="American Fuzzy Lop" class="checkbox_input" value="5" type="checkbox">
+                            <label for="American Fuzzy Lop">American Fuzzy Lop</label>
+                            <input name="breed" id="Polish Rabbit" class="checkbox_input" value="6" type="checkbox">
+                            <label for="Polish Rabbit">Polish Rabbit</label>
+                        </div>
+
+                        <div id="button_container">
+                            <button id="back_button" type="button" onclick="hideFilterMenu()">cancel</button>
+                            <button id="submit_button" type="submit">submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>    
+
+        </div>
+
+        <div id="animal_display" >
+            <div id="big_text">All animals</div>
+            <hr>
+            <div id="profile_container">
+                <div id="big_text">Loading animals...</div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

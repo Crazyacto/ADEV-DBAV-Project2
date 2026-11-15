@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/admin_top_styling.css">
+    <link rel="stylesheet" href="./css/admin_add_page.css">
+    <script src="./js/admin_add_page.js" defer></script>
+    <title>The Animal Database</title>
+</head>
+<body>
+    <main id="top_bar">
+        <div class="nav_container">
+            <img src="./images/temasek_poly_logo.png">
+            <a href="./home.html">Log Out</a>
+        </div>
+    </main>
+
+    <main id="main_content">
+        <form>
+            <div id="big_text">Name</div>
+            <input type="text" name="name" placeholder="Name" class="typing_input" maxlength="35" required>
+
+            <div id="big_text">Image name</div>
+            <input type="text" name="imageName" placeholder="Image name (e.g, test_picture)" maxlength="46" class="typing_input" required>
+
+            <div id="big_text">Age</div>
+            <input type="number" name="age" placeholder="Age" id="age_input" class="typing_input" required>
+
+            <!-- Species -->
+            <div id="big_text">Species</div>
+            <fieldset id="species_container">
+                <input type="radio" name="species" value="1" id="Cat" class="radio_input" onclick="hideRest('Cat')" required>
+                <label for="Cat">Cat</label>
+
+                <input type="radio" name="species" value="2" class="radio_input" onclick="hideRest('Dog')" id="Dog">
+                <label for="Dog">Dog</label>
+
+                <input type="radio" name="species" value="3" class="radio_input" onclick="hideRest('Rabbit')" id="Rabbit">
+                <label for="Rabbit">Rabbit</label>
+            </fieldset>
+
+            <!-- Breed -->
+             <div id="big_text">Breed</div>
+            <fieldset id="breed_container">
+                <input type="radio" name="breed" value="1" class="radio_input" id="American_Shorthair" required>
+                <label for="American_Shorthair" id="American_Shorthair_label">American Shorthair</label>
+
+                <input type="radio" name="breed" value="2" class="radio_input" id="Maine_Coon">
+                <label for="Maine_Coon">Maine Coon</label>
+
+                <input type="radio" name="breed" value="3" class="radio_input" id="Golden_Retriever">
+                <label for="Golden_Retriever">Golden Retriever</label>
+
+                <input type="radio" name="breed" value="4" class="radio_input" id="Japanese_Spitz">
+                <label for="Japanese_Spitz">Japanese Spitz</label>
+
+                <input type="radio" name="breed" value="5" class="radio_input" id="American_Fuzzy_Lop">
+                <label for="American_Fuzzy_Lop">American Fuzzy Lop</label>
+
+                <input type="radio" name="breed" value="6" class="radio_input" id="Polish_Rabbit">
+                <label for="Polish_Rabbit">Polish Rabbit</label>
+            </fieldset>
+
+            <!-- Gender -->
+            <div id="big_text">Gender</div>
+            <fieldset id="gender_container">
+                <input type="radio" name="gender" value="1" class="radio_input" id="Male" required>
+                <label for="Male">Male</label>
+
+                <input type="radio" name="gender" value="2" class="radio_input" id="Female">
+                <label for="Female">Female</label>
+            </fieldset>
+
+            <!-- Adoption Status -->
+             <div id="big_text">Adoption status</div>
+            <fieldset id="adoption_status_container">
+                <input type="radio" name="adoptionStatus" value="1" class="radio_input" id="Available" required>
+                <label for="Available">Available</label>
+
+                <input type="radio" name="adoptionStatus" value="2" class="radio_input" id="Reserved">
+                <label for="Reserved">Reserved</label>
+
+                <input type="radio" name="adoptionStatus" value="3" class="radio_input" id="Adopted">
+                <label for="Adopted">Adopted</label>
+            </fieldset>
+
+            <div id="big_text">Personality description</div>
+            <textarea name="personalityDescription" placeholder="Describe what the animal is like..." id="personality_description_input" maxlength="500"></textarea>
+            <div id="button_container">
+                <a id="cancel_button" href="./admin_animal_database.html">cancel</a>
+                <button type="submit">submit</button>
+            </div>
+            
+        </form>
+    </main>
+    
+</body>
+</html>

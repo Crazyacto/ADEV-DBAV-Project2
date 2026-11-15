@@ -1,0 +1,34 @@
+.mini_animal_profile {
+    width: fit-content;
+    background-color: #FDACAC;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 28px;
+    margin-left: 24px;
+    margin-right: 24px;
+    border-radius: 25px;
+
+    max-width: 250px;
+}
+
+.mini_animal_profile img {
+    width: 250px;
+    height: 200px;
+    border-radius: 25px 25px 0 0;
+}
+
+.mini_animal_profile #profile_big_text {
+    color: black;
+    padding-top: 24px;
+    padding-left: 24px;
+    font-size: 32px;
+}
+
+.mini_animal_profile #profile_small_text {
+    color: black;
+    padding-left: 24px;
+    padding-top: 12px;
+    font-size: 16px;
+}

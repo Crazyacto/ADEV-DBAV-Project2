@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/admin_top_styling.css">
+    <link rel="stylesheet" href="./css/admin_detailed_profile.css">
+    <script src="./js/detailed_profile.js"></script>
+    
+    <title>The Animal Database</title>
+</head>
+<body onload="loadFullProfile()">
+    <main id="top_bar">
+        <div class="nav_container">
+            <img src="./images/temasek_poly_logo.png">
+            <a href="./home.html">Log Out</a>
+        </div>
+    </main>
+
+    <main id="main_content">
+
+        <img id="animalImage" src="">
+        
+        <div id="container_1">
+            <div class="big_text" id="animalName">Animal name</div>
+            <div id="container_2">
+                <div class="small_text" id="species">Species: </div>
+                <div class="small_text" id="gender">Gender: </div>
+                <div class="small_text" id="breed">Breed: </div>
+                <div class="small_text" id="age">Age: </div>
+                <div class="small_text" id="adoptionStatus">Adoption Status: </div>
+            </div>
+            <div class="small_text">Temperament/personality description: </div>
+            <div class="smaller_text" id="personalityDescription"></div>
+
+            <a id="back_button" href="./admin_animal_database.html">Back</a>
+        </div>
+    </main>
+
+    <main id="button_container">
+        <a id="edit_button" href=""><img src="./images/edit_icon.png">edit animal entry</a>
+        <script>
+            const query = window.location.search;
+            document.getElementById("edit_button").href = "./admin_edit_page.html" + String(query);
+        </script>
+        <button id="delete_button" onclick="showConfirmation()"><img src="./images/delete_icon.png">delete animal entry</button>
+    </main>
+
+    <main id="confirmation_overlay">
+        <div id="confirmation_menu">
+            <div class="small_text">Are you sure you want to delete this profile?</div>
+            <div id="overlay_button_container">
+                <button id="actual_delete_button" onclick="deleteProfile()">Yes</button>
+                <button id="actual_not_delete_button" onclick="hideConfirmation()">No</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
